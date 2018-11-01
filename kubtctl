@@ -1,0 +1,16 @@
+sudo apt-get update && sudo apt-get install -y apt-transport-https
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
+sudo apt-get update
+sudo apt-get install -y kubectl
+
+Install with snap on Ubuntu
+If you are on Ubuntu or one of other Linux distributions that support snap package manager, kubectl is available as a snap application.
+
+Switch to the snap user and run the installation command:
+
+sudo snap install kubectl --classic
+Test to ensure the version you installed is sufficiently up-to-date:
+
+kubectl version
+
